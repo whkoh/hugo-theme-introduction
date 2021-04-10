@@ -1,7 +1,8 @@
 <div class="section" id="footer">
     <div class="container has-text-centered">
     {{ with .Site.Params.footerText }}
-        {{ . | markdownify }}
+      {{ . | markdownify }}
+      {{ now.Format "Mon Jan 2 2006"}}
     {{ else }}
         <span class="footer-text">
             {{ i18n "footer_text" . | markdownify }}
